@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PomodoroApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\PomodoroApp.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PomodoroApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.PomodoroApp.props",
+      "PackagePath": "build\\PomodoroApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.PomodoroApp.props",
+      "PackagePath": "buildMultiTargeting\\PomodoroApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.PomodoroApp.props",
+      "PackagePath": "buildTransitive\\PomodoroApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
