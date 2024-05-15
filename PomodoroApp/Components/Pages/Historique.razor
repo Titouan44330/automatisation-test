@@ -1,0 +1,70 @@
+﻿@page "/historique"
+@rendermode InteractiveServer
+@using System.Text.Json 
+@using System;
+@using System.Collections.Generic;
+@using System.IO;
+@using System.Text.Json;
+
+@{
+    string jsonFilePath = Path.Combine("wwwroot", "data", "sequences.json");
+    string jsonSequences = File.ReadAllText(jsonFilePath);
+    Console.WriteLine(jsonSequences);
+    List<Sequence> sequences = JsonSerializer.Deserialize<List<Sequence>>(jsonSequences);
+}
+
+<PageTitle>Historique</PageTitle>
+
+<h1>Historique</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Date de début</th>
+      <th scope="col">Temps de travail</th>
+      <th scope="col">Temps de pause</th>
+      <th scope="col">Statut</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var sequence in sequences){
+    <tr>
+        <td scope="row">@sequence.startTime</td>
+        <td>@sequence.workTime.Substring(0,sequence.workTime.Length-5)</td>
+        <td>@sequence.pauseTime</td>
+        <td>@sequence.status</td>
+    </tr>
+    }
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row" colspan="1">Temps de travail total</th>
+      <td colspan="3">@SumTotalWorkTime(sequences).ToString(@"dd\.hh\:mm\:ss")</td>
+    </tr>
+  </tfoot>
+</table>
+
+
+@code {
+    
+    public class Sequence
+    {
+        public string startTime { get; set; }
+        public string endTime { get; set; }
+        public string status { get; set; }
+        public string pauseTime { get; set; }
+        public string workTime { get; set; }
+        public string totalTime { get; set; }
+    }
+
+    public static TimeSpan SumTotalWorkTime(List<Sequence> sequences)
+    {
+        TimeSpan totalWorkTime = TimeSpan.Zero;
+        foreach (var sequence in sequences)
+        {
+            // Convertir le totalTime de la séquence en TimeSpan et l'ajouter à la somme totale
+            totalWorkTime += TimeSpan.Parse(sequence.workTime.Substring(0,sequence.workTime.Length-5));
+        }
+        return totalWorkTime;
+    }
+}
