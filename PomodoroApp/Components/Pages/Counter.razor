@@ -1,19 +1,200 @@
 ﻿@page "/counter"
 @rendermode InteractiveServer
+@using System.Timers
+@using System.IO;
+@using System.Text.Json;
+@using System.Collections.Generic;
+@using System.Diagnostics;
 
 <PageTitle>Counter</PageTitle>
 
 <h1>Counter</h1>
 
-<p role="status">Current count: @currentCount</p>
+<button class="btn btn-primary" @onclick="Set25" disabled="@is25">25/5</button>
+<button class="btn btn-primary" @onclick="Set45" disabled="@(!is25)">45/15</button>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<p role="status">@typeTime: @formatTime(remainingTime)</p>
+
+<button class="btn btn-primary" @onclick="StartTimer" disabled="@isTimerRunning">Start</button>
+<button class="btn btn-primary" @onclick="PauseTimer" disabled="@(!isTimerRunning)">Pause</button>
+<button class="btn btn-primary" @onclick="ResetTimer" disabled="@(!isTimerPaused)">Reset</button>
+<button class="btn btn-primary" @onclick="endSession" disabled="@(!isTimerPaused)">End</button>
+
+
 
 @code {
-    private int currentCount = 0;
+public class MyData
+{
+public string startTime { get; set; }
+public string endTime { get; set; }
+public string status { get; set; }
+public string pauseTime { get; set; }
+public string workTime { get; set; }
+public string totalTime { get; set; }
+}
+private int currentCount = 0;
+private int pomodoroDuration = 1 * 60; // 25 minutes in seconds
+private int remainingTime;
+private bool isTimerRunning = false;
+private bool isTimerPaused = false;
+private bool is25 = true;
+private Timer timer;
+private string typeTime = "Travail";
+private Stopwatch dureeTravail = new Stopwatch();
+private Stopwatch dureePause = new Stopwatch();
+private Stopwatch dureeTotale = new Stopwatch();
+private DateTime dateDebut;
 
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
+
+protected override void OnInitialized()
+{
+remainingTime = pomodoroDuration;
+timer = new Timer(1000);
+timer.Elapsed += TimerElapsed;
+}
+
+private void TimerElapsed(object sender, ElapsedEventArgs e)
+{
+remainingTime--;
+
+if (remainingTime <= 0)
+{
+timer.Stop();
+isTimerRunning = false;
+
+if (typeTime == "Pause")
+{
+typeTime = "Travail";
+if (is25 == true)
+{
+pomodoroDuration = 25 * 60;
+remainingTime = pomodoroDuration;
+dureeTravail.Start();
+dureePause.Stop();
+StartTimer();
+}
+else
+{
+pomodoroDuration = 45 * 60;
+remainingTime = pomodoroDuration;
+dureeTravail.Start();
+dureePause.Stop();
+StartTimer();
+}
+} else if (typeTime == "Travail")
+{
+typeTime = "Pause";
+if (is25 == true)
+{
+pomodoroDuration = 1 * 60;
+remainingTime = pomodoroDuration;
+dureePause.Start();
+dureeTravail.Stop();
+StartTimer();
+}
+else
+{
+pomodoroDuration = 15 * 60;
+remainingTime = pomodoroDuration;
+dureePause.Start();
+dureeTravail.Stop();
+StartTimer();
+}
+}
+
+
+}
+
+InvokeAsync(StateHasChanged);
+}
+
+private void IncrementCount()
+{
+currentCount++;
+}
+
+private void StartTimer()
+{
+isTimerRunning = true;
+isTimerPaused = false;
+if (currentCount == 0)
+{
+dureeTotale.Start();
+dureeTravail.Start();
+dateDebut = DateTime.Now;
+}
+currentCount++;
+timer.Start();
+}
+
+private void PauseTimer()
+{
+isTimerPaused = true;
+isTimerRunning = false;
+timer.Stop();
+dureeTotale.Stop();
+dureeTravail.Stop();
+dureePause.Stop();
+}
+
+private void ResetTimer()
+{
+timer.Stop();
+remainingTime = pomodoroDuration;
+}
+
+private string formatTime(int seconds)
+{
+int minutes = seconds / 60;
+int secs = seconds % 60;
+return $"{minutes:00}:{secs:00}";
+}
+
+private void Set25()
+{
+is25 = true;
+pomodoroDuration = 25 * 60;
+remainingTime = pomodoroDuration;
+}
+
+private void Set45()
+{
+is25 = false;
+pomodoroDuration = 45 * 60;
+remainingTime = pomodoroDuration;
+}
+
+private async void endSession()
+{
+DateTime dateFin = DateTime.Now;
+dureeTotale.Stop();
+dureePause.Stop();
+dureeTravail.Stop();
+string typePomodoro = "";
+if (is25)
+{
+typePomodoro = "25/5";
+}
+else
+{
+typePomodoro = "45/15";
+}
+
+
+MyData myData = new MyData
+{
+startTime = dateDebut.ToString(),
+endTime = dateFin.ToString(),
+status = typePomodoro,
+pauseTime = dureePause.Elapsed.ToString(),
+workTime = dureeTravail.Elapsed.ToString(),
+totalTime = dureeTotale.Elapsed.ToString(),
+};
+string readJsonData = await File.ReadAllTextAsync("data.json");
+List<MyData> dataList = JsonSerializer.Deserialize<List<MyData>>(readJsonData) ?? new List<MyData>();
+dataList.Add(myData);
+string jsonData = JsonSerializer.Serialize(dataList);
+await File.WriteAllTextAsync("data.json", jsonData);
+}
+
 }
