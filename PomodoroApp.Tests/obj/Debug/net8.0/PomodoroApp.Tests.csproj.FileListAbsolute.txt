@@ -211,3 +211,4 @@
 /Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp.Tests/bin/Debug/net8.0/out/PomodoroApp.runtimeconfig.json
 /Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp.Tests/bin/Debug/net8.0/out/PomodoroApp.staticwebassets.runtime.json
 /Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp.Tests/bin/Debug/net8.0/out/wwwroot/data/sequences.json
+/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp.Tests/bin/Debug/net8.0/CoverletSourceRootsMapping_PomodoroApp.Tests

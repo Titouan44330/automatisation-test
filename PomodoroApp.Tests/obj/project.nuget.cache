@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VvPX2sJMATc=",
+  "dgSpecHash": "yXHUXIurZdk=",
   "success": true,
   "projectFilePath": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp.Tests/PomodoroApp.Tests.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "/Users/nicolasanjorand/.nuget/packages/bunit/1.28.9/bunit.1.28.9.nupkg.sha512",
     "/Users/nicolasanjorand/.nuget/packages/bunit.core/1.28.9/bunit.core.1.28.9.nupkg.sha512",
     "/Users/nicolasanjorand/.nuget/packages/bunit.web/1.28.9/bunit.web.1.28.9.nupkg.sha512",
+    "/Users/nicolasanjorand/.nuget/packages/coverlet.collector/6.0.2/coverlet.collector.6.0.2.nupkg.sha512",
     "/Users/nicolasanjorand/.nuget/packages/jetbrains.annotations/2024.2.0-eap1/jetbrains.annotations.2024.2.0-eap1.nupkg.sha512",
     "/Users/nicolasanjorand/.nuget/packages/microsoft.applicationinsights/2.22.0/microsoft.applicationinsights.2.22.0.nupkg.sha512",
     "/Users/nicolasanjorand/.nuget/packages/microsoft.aspnetcore.authorization/8.0.4/microsoft.aspnetcore.authorization.8.0.4.nupkg.sha512",

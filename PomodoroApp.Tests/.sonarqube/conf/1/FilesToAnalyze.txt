@@ -1,7 +1,0 @@
-﻿/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp.Tests/Components/Pages/CounterTest.cs
-/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp.Tests/Components/Pages/HistoriqueTest.cs
-/Users/nicolasanjorand/.nuget/packages/microsoft.net.test.sdk/17.10.0/build/netcoreapp3.1/Microsoft.NET.Test.Sdk.Program.cs
-/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp.Tests/wwwroot/data/sequences.json
-/Users/nicolasanjorand/.nuget/packages/mstest.testadapter/3.4.3/build/net8.0/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
-/Users/nicolasanjorand/.nuget/packages/mstest.testadapter/3.4.3/build/net8.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-/Users/nicolasanjorand/.nuget/packages/mstest.testadapter/3.4.3/build/net8.0/Microsoft.TestPlatform.AdapterUtilities.dll

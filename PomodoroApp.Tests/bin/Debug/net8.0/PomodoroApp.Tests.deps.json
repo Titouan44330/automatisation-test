@@ -13,6 +13,7 @@
           "MSTest.TestFramework": "3.4.3",
           "Microsoft.NET.Test.Sdk": "17.10.0",
           "PomodoroApp": "1.0.0",
+          "coverlet.collector": "6.0.2",
           "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions": "14.0.0.0"
         },
         "runtime": {
@@ -92,6 +93,7 @@
           }
         }
       },
+      "coverlet.collector/6.0.2": {},
       "JetBrains.Annotations/2024.2.0-eap1": {
         "runtime": {
           "lib/netstandard2.0/JetBrains.Annotations.dll": {
@@ -968,6 +970,13 @@
       "sha512": "sha512-0WK0y1drmzXlF0tmYf+sIVrgc2szbJCVzTR4v95C1SDmmf3/EJfOECOrMrFMHOBg4Wj4uPT8Ru+3cxPxmzGFWQ==",
       "path": "bunit.web/1.28.9",
       "hashPath": "bunit.web.1.28.9.nupkg.sha512"
+    },
+    "coverlet.collector/6.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bJShQ6uWRTQ100ZeyiMqcFlhP7WJ+bCuabUs885dJiBEzMsJMSFr7BOyeCw4rgvQokteGi5rKQTlkhfQPUXg2A==",
+      "path": "coverlet.collector/6.0.2",
+      "hashPath": "coverlet.collector.6.0.2.nupkg.sha512"
     },
     "JetBrains.Annotations/2024.2.0-eap1": {
       "type": "package",

@@ -651,6 +651,27 @@
               "resultFile": {
                 "uri": "file:///Volumes/Crucial%20X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/Components/Pages/Counter.razor",
                 "region": {
+                  "startLine": 41,
+                  "startColumn": 13,
+                  "endLine": 41,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1104",
+          "level": "warning",
+          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///Volumes/Crucial%20X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/Components/Pages/Counter.razor",
+                "region": {
                   "startLine": 42,
                   "startColumn": 14,
                   "endLine": 42,
@@ -693,10 +714,10 @@
               "resultFile": {
                 "uri": "file:///Volumes/Crucial%20X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/Components/Pages/Counter.razor",
                 "region": {
-                  "startLine": 41,
-                  "startColumn": 13,
-                  "endLine": 41,
-                  "endColumn": 24
+                  "startLine": 45,
+                  "startColumn": 18,
+                  "endLine": 45,
+                  "endColumn": 46
                 }
               }
             }
@@ -718,27 +739,6 @@
                   "startColumn": 18,
                   "endLine": 44,
                   "endColumn": 48
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "S1104",
-          "level": "warning",
-          "message": "Make this field 'private' and encapsulate it in a 'public' property.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///Volumes/Crucial%20X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/Components/Pages/Counter.razor",
-                "region": {
-                  "startLine": 45,
-                  "startColumn": 18,
-                  "endLine": 45,
-                  "endColumn": 46
                 }
               }
             }

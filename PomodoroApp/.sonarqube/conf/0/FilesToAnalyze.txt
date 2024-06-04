@@ -36,6 +36,7 @@
 /Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/Components/Layout/MainLayout.razor.css
 /Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/Components/Layout/NavMenu.razor.css
 /Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/coverage.xml
+/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/dotCover.Output.html
 /Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/out/AngleSharp.Css.dll
 /Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/out/AngleSharp.Diffing.dll
 /Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/out/AngleSharp.dll
@@ -65,4 +66,6 @@
 /Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/out/wwwroot/favicon.png
 /Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/out/wwwroot/PomodoroApp.styles.css
 /Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/out/wwwroot/_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js
+/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/sonarqubecoverage/SonarQube.xml
+/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/test.coverage
 /Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/Properties/launchSettings.json

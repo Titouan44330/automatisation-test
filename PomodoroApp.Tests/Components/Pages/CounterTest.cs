@@ -10,6 +10,7 @@ namespace PomodoroApp.Tests.Components.Pages;
 [TestSubject(typeof(Counter))]
 public class CounterTest
 {
+    
 
     [TestMethod]
     public void IncrementCountTest()

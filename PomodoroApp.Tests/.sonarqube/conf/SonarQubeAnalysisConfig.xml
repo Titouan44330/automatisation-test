@@ -136,7 +136,7 @@
     <Property Name="sonar.core.startTime">04/06/2024 08:13:51</Property>
   </ServerSettings>
   <LocalSettings>
-    <Property Name="sonar.cs.vscoveragexml.reportsPaths">coverage.xml</Property>
+    <Property Name="sonar.coverageReportPaths">./sonarqubecoverage/SonarQube.xml</Property>
   </LocalSettings>
   <AnalyzersSettings>
     <AnalyzerSettings>
