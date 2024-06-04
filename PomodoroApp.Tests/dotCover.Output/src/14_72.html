@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/Components/Pages/Historique.razor</title>
+    <script type="text/javascript" src="../js/dotcover.sourceview.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/dotcover.report.css" />
+  </head>
+  <body>
+    <pre id="content" class="source-code">
+@page &quot;/historique&quot;
+@rendermode InteractiveServer
+@using System.Text.Json 
+@using System;
+@using System.Collections.Generic;
+@using System.IO;
+@using System.Text.Json;
+
+@{
+    string jsonFilePath = Path.Combine(&quot;wwwroot&quot;, &quot;data&quot;, &quot;sequences.json&quot;);
+    string jsonSequences = File.ReadAllText(jsonFilePath);
+    Console.WriteLine(jsonSequences);
+    List&lt;Sequence&gt; sequences = JsonSerializer.Deserialize&lt;List&lt;Sequence&gt;&gt;(jsonSequences);
+}
+
+&lt;PageTitle&gt;Historique&lt;/PageTitle&gt;
+
+&lt;h1&gt;Historique&lt;/h1&gt;
+
+&lt;table class=&quot;table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Date de d&#233;but&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Temps de travail&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Temps de pause&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Statut&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    @foreach(var sequence in sequences){
+    &lt;tr&gt;
+        &lt;td scope=&quot;row&quot;&gt;@sequence.startTime&lt;/td&gt;
+        &lt;td&gt;@sequence.workTime.Substring(0,sequence.workTime.Length-8)&lt;/td&gt;
+        @if (@sequence.pauseTime.Length &gt; 10)
+        {
+            &lt;td&gt;@sequence.pauseTime.Substring(0,sequence.pauseTime.Length-8)&lt;/td&gt;
+        }
+        else
+        {
+            &lt;td&gt;@sequence.pauseTime&lt;/td&gt;
+
+        }
+        &lt;td&gt;@sequence.status&lt;/td&gt;
+    &lt;/tr&gt;
+    }
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;row&quot; colspan=&quot;1&quot;&gt;Total&lt;/th&gt;
+      &lt;td&gt;@SumTotalWorkTime(sequences).ToString(@&quot;hh\:mm\:ss&quot;)&lt;/td&gt;
+      &lt;td&gt;@SumTotalPauseTime(sequences).ToString(@&quot;hh\:mm\:ss&quot;)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+
+
+@code {
+    
+    public class Sequence
+    {
+        public string startTime { get; set; }
+        public string endTime { get; set; }
+        public string status { get; set; }
+        public string pauseTime { get; set; }
+        public string workTime { get; set; }
+        public string totalTime { get; set; }
+    }
+
+    public TimeSpan SumTotalWorkTime(List&lt;Sequence&gt; sequences)
+    {
+        TimeSpan totalWorkTime = TimeSpan.Zero;
+        foreach (var sequence in sequences)
+        {
+            // Convertir le totalTime de la s&#233;quence en TimeSpan et l&#39;ajouter &#224; la somme totale
+            totalWorkTime += TimeSpan.Parse(sequence.workTime.Substring(0,sequence.workTime.Length-5));
+        }
+        return totalWorkTime;
+    }
+    
+    public TimeSpan SumTotalPauseTime(List&lt;Sequence&gt; sequences)
+    {
+        TimeSpan totalPauseTime = TimeSpan.Zero;
+        foreach (var sequence in sequences)
+        {
+            // Convertir le totalTime de la s&#233;quence en TimeSpan et l&#39;ajouter &#224; la somme totale
+            @if (@sequence.pauseTime.Length &gt; 10)
+            {
+                totalPauseTime += TimeSpan.Parse(sequence.pauseTime.Substring(0, sequence.pauseTime.Length - 5));
+            }
+            else
+            {
+                totalPauseTime += TimeSpan.Parse(sequence.pauseTime);
+
+            }
+        }
+        return totalPauseTime;
+    }
+}
+    </pre>
+    <script type="text/javascript">
+      highlightRanges([[10,5,10,77,0],[11,5,11,59,0],[12,5,12,38,0],[13,5,13,90,0],[30,6,30,13,0],[30,14,30,26,0],[30,27,30,29,0],[30,30,30,39,0],[30,40,30,41,0],[34,10,34,46,0],[35,9,35,10,0],[37,9,37,10,0],[39,9,39,10,0],[42,9,42,10,0],[45,5,45,6,0],[61,35,61,39,0],[61,40,61,44,0],[62,33,62,37,0],[62,38,62,42,0],[63,32,63,36,0],[63,37,63,41,0],[64,35,64,39,1],[64,40,64,44,1],[65,34,65,38,1],[65,39,65,43,1],[66,35,66,39,0],[66,40,66,44,0],[70,5,70,6,1],[71,9,71,48,1],[72,9,72,16,1],[72,18,72,30,1],[72,31,72,33,1],[72,34,72,43,1],[73,9,73,10,1],[75,13,75,104,1],[76,9,76,10,1],[77,9,77,30,1],[78,5,78,6,1],[81,5,81,6,1],[82,9,82,49,1],[83,9,83,16,1],[83,18,83,30,1],[83,31,83,33,1],[83,34,83,43,1],[84,9,84,10,1],[86,14,86,50,1],[87,13,87,14,1],[88,17,88,114,1],[89,13,89,14,1],[91,13,91,14,0],[92,17,92,70,0],[94,13,94,14,0],[95,9,95,10,1],[96,9,96,31,1],[97,5,97,6,1]]);
+    </script>
+  </body>
+</html>

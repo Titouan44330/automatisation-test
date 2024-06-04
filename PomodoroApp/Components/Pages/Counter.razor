@@ -6,6 +6,7 @@
 @using System.Collections.Generic;
 @using System.Diagnostics;
 
+
 <PageTitle>Counter</PageTitle>
 
 <h1>Counter</h1>
@@ -32,18 +33,18 @@ public string pauseTime { get; set; }
 public string workTime { get; set; }
 public string totalTime { get; set; }
 }
-private int currentCount = 0;
-private int pomodoroDuration = 1 * 60; // 25 minutes in seconds
-private int remainingTime;
-private bool isTimerRunning = false;
-private bool isTimerPaused = false;
-private bool is25 = true;
-private Timer timer;
-private string typeTime = "Travail";
-private Stopwatch dureeTravail = new Stopwatch();
-private Stopwatch dureePause = new Stopwatch();
-private Stopwatch dureeTotale = new Stopwatch();
-private DateTime dateDebut;
+public int currentCount = 0;
+public int pomodoroDuration = 1 * 60; // 25 minutes in seconds
+public int remainingTime;
+public bool isTimerRunning = false;
+public bool isTimerPaused = false;
+public bool is25 = true;
+public Timer timer;
+public string typeTime = "Travail";
+public Stopwatch dureeTravail = new Stopwatch();
+public Stopwatch dureePause = new Stopwatch();
+public Stopwatch dureeTotale = new Stopwatch();
+public DateTime dateDebut;
 
 
 protected override void OnInitialized()
@@ -53,7 +54,7 @@ timer = new Timer(1000);
 timer.Elapsed += TimerElapsed;
 }
 
-private void TimerElapsed(object sender, ElapsedEventArgs e)
+public void TimerElapsed(object sender, ElapsedEventArgs e)
 {
 remainingTime--;
 
@@ -108,12 +109,12 @@ StartTimer();
 InvokeAsync(StateHasChanged);
 }
 
-private void IncrementCount()
+public void IncrementCount()
 {
 currentCount++;
 }
 
-private void StartTimer()
+public void StartTimer()
 {
 isTimerRunning = true;
 isTimerPaused = false;
@@ -127,7 +128,7 @@ currentCount++;
 timer.Start();
 }
 
-private void PauseTimer()
+public void PauseTimer()
 {
 isTimerPaused = true;
 isTimerRunning = false;
@@ -137,34 +138,34 @@ dureeTravail.Stop();
 dureePause.Stop();
 }
 
-private void ResetTimer()
+public void ResetTimer()
 {
 timer.Stop();
 remainingTime = pomodoroDuration;
 }
 
-private string formatTime(int seconds)
+public string formatTime(int seconds)
 {
 int minutes = seconds / 60;
 int secs = seconds % 60;
 return $"{minutes:00}:{secs:00}";
 }
 
-private void Set25()
+public void Set25()
 {
 is25 = true;
 pomodoroDuration = 25 * 60;
 remainingTime = pomodoroDuration;
 }
 
-private void Set45()
+public void Set45()
 {
 is25 = false;
 pomodoroDuration = 45 * 60;
 remainingTime = pomodoroDuration;
 }
 
-private async void endSession()
+public async void endSession()
 {
 DateTime dateFin = DateTime.Now;
 dureeTotale.Stop();
@@ -190,11 +191,11 @@ pauseTime = dureePause.Elapsed.ToString(),
 workTime = dureeTravail.Elapsed.ToString(),
 totalTime = dureeTotale.Elapsed.ToString(),
 };
-string readJsonData = await File.ReadAllTextAsync("data.json");
+string readJsonData = await File.ReadAllTextAsync("wwwroot/data/sequences.json");
 List<MyData> dataList = JsonSerializer.Deserialize<List<MyData>>(readJsonData) ?? new List<MyData>();
 dataList.Add(myData);
 string jsonData = JsonSerializer.Serialize(dataList);
-await File.WriteAllTextAsync("data.json", jsonData);
+await File.WriteAllTextAsync("wwwroot/data/sequences.json", jsonData);
 }
 
 }

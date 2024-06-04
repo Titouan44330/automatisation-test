@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UBWPDCAOe5x+nKoIW2t72h+F3dYJcQuBnfU8BfqZV20=",
+  "Hash": "tVxYmCNq5dBMC4F/wc8aEqEL9BU7PK5azQjA9ejbEWE=",
   "Source": "PomodoroApp",
   "BasePath": "_content/PomodoroApp",
   "Mode": "Default",
@@ -8,19 +8,38 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "PomodoroApp\\wwwroot",
+      "Name": "PomodoroApp/wwwroot",
       "Source": "PomodoroApp",
-      "ContentRoot": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\wwwroot\\",
+      "ContentRoot": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/wwwroot/",
       "BasePath": "_content/PomodoroApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PomodoroApp.styles.css",
+      "Identity": "/Users/nicolasanjorand/.nuget/packages/microsoft.aspnetcore.components.webassembly.authentication/8.0.4/staticwebassets/AuthenticationService.js",
+      "SourceId": "Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "SourceType": "Package",
+      "ContentRoot": "/Users/nicolasanjorand/.nuget/packages/microsoft.aspnetcore.components.webassembly.authentication/8.0.4/staticwebassets/",
+      "BasePath": "_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "RelativePath": "AuthenticationService.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/nicolasanjorand/.nuget/packages/microsoft.aspnetcore.components.webassembly.authentication/8.0.4/staticwebassets/AuthenticationService.js"
+    },
+    {
+      "Identity": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/obj/Debug/net8.0/scopedcss/bundle/PomodoroApp.styles.css",
       "SourceId": "PomodoroApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/PomodoroApp",
       "RelativePath": "PomodoroApp.styles.css",
       "AssetKind": "All",
@@ -33,13 +52,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PomodoroApp.styles.css"
+      "OriginalItemSpec": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/obj/Debug/net8.0/scopedcss/bundle/PomodoroApp.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PomodoroApp.bundle.scp.css",
+      "Identity": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/obj/Debug/net8.0/scopedcss/projectbundle/PomodoroApp.bundle.scp.css",
       "SourceId": "PomodoroApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/PomodoroApp",
       "RelativePath": "PomodoroApp.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +71,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PomodoroApp.bundle.scp.css"
+      "OriginalItemSpec": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/obj/Debug/net8.0/scopedcss/projectbundle/PomodoroApp.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\wwwroot\\app.css",
+      "Identity": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/wwwroot/app.css",
       "SourceId": "PomodoroApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\wwwroot\\",
+      "ContentRoot": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/wwwroot/",
       "BasePath": "_content/PomodoroApp",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -71,13 +90,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\app.css"
+      "OriginalItemSpec": "wwwroot/app.css"
     },
     {
-      "Identity": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/wwwroot/bootstrap/bootstrap.min.css",
       "SourceId": "PomodoroApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\wwwroot\\",
+      "ContentRoot": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/wwwroot/",
       "BasePath": "_content/PomodoroApp",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -90,13 +109,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/wwwroot/bootstrap/bootstrap.min.css.map",
       "SourceId": "PomodoroApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\wwwroot\\",
+      "ContentRoot": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/wwwroot/",
       "BasePath": "_content/PomodoroApp",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -109,13 +128,32 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+      "OriginalItemSpec": "wwwroot/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\wwwroot\\favicon.png",
+      "Identity": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/wwwroot/data/sequences.json",
       "SourceId": "PomodoroApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\wwwroot\\",
+      "ContentRoot": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/wwwroot/",
+      "BasePath": "_content/PomodoroApp",
+      "RelativePath": "data/sequences.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/data/sequences.json"
+    },
+    {
+      "Identity": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/wwwroot/favicon.png",
+      "SourceId": "PomodoroApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/wwwroot/",
       "BasePath": "_content/PomodoroApp",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -128,7 +166,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.png"
+      "OriginalItemSpec": "wwwroot/favicon.png"
     }
   ]
 }

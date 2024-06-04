@@ -30,16 +30,25 @@
     @foreach(var sequence in sequences){
     <tr>
         <td scope="row">@sequence.startTime</td>
-        <td>@sequence.workTime.Substring(0,sequence.workTime.Length-5)</td>
-        <td>@sequence.pauseTime</td>
+        <td>@sequence.workTime.Substring(0,sequence.workTime.Length-8)</td>
+        @if (@sequence.pauseTime.Length > 10)
+        {
+            <td>@sequence.pauseTime.Substring(0,sequence.pauseTime.Length-8)</td>
+        }
+        else
+        {
+            <td>@sequence.pauseTime</td>
+
+        }
         <td>@sequence.status</td>
     </tr>
     }
   </tbody>
   <tfoot>
     <tr>
-      <th scope="row" colspan="1">Temps de travail total</th>
-      <td colspan="3">@SumTotalWorkTime(sequences).ToString(@"dd\.hh\:mm\:ss")</td>
+      <th scope="row" colspan="1">Total</th>
+      <td>@SumTotalWorkTime(sequences).ToString(@"hh\:mm\:ss")</td>
+      <td>@SumTotalPauseTime(sequences).ToString(@"hh\:mm\:ss")</td>
     </tr>
   </tfoot>
 </table>
@@ -57,7 +66,7 @@
         public string totalTime { get; set; }
     }
 
-    public static TimeSpan SumTotalWorkTime(List<Sequence> sequences)
+    public TimeSpan SumTotalWorkTime(List<Sequence> sequences)
     {
         TimeSpan totalWorkTime = TimeSpan.Zero;
         foreach (var sequence in sequences)
@@ -66,5 +75,24 @@
             totalWorkTime += TimeSpan.Parse(sequence.workTime.Substring(0,sequence.workTime.Length-5));
         }
         return totalWorkTime;
+    }
+    
+    public TimeSpan SumTotalPauseTime(List<Sequence> sequences)
+    {
+        TimeSpan totalPauseTime = TimeSpan.Zero;
+        foreach (var sequence in sequences)
+        {
+            // Convertir le totalTime de la séquence en TimeSpan et l'ajouter à la somme totale
+            @if (@sequence.pauseTime.Length > 10)
+            {
+                totalPauseTime += TimeSpan.Parse(sequence.pauseTime.Substring(0, sequence.pauseTime.Length - 5));
+            }
+            else
+            {
+                totalPauseTime += TimeSpan.Parse(sequence.pauseTime);
+
+            }
+        }
+        return totalPauseTime;
     }
 }

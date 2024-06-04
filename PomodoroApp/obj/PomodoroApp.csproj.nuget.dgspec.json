@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\PomodoroApp.csproj": {}
+    "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/PomodoroApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\PomodoroApp.csproj": {
+    "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/PomodoroApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\PomodoroApp.csproj",
+        "projectUniqueName": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/PomodoroApp.csproj",
         "projectName": "PomodoroApp",
-        "projectPath": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\PomodoroApp.csproj",
-        "packagesPath": "C:\\Users\\Utilisateur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Utilisateur\\Projects\\test_auto\\automatisation-test\\PomodoroApp\\obj\\",
+        "projectPath": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/PomodoroApp.csproj",
+        "packagesPath": "/Users/nicolasanjorand/.nuget/packages/",
+        "outputPath": "/Volumes/Crucial X6/EPSI_I1/atelier-auto-tests/automatisation-test/PomodoroApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Utilisateur\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/nicolasanjorand/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -42,6 +42,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "bunit": {
+              "target": "Package",
+              "version": "[1.28.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -61,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
